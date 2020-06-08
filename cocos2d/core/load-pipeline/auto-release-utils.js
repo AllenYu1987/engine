@@ -129,6 +129,9 @@ module.exports = {
                 cc.loader.release(key);
             }
         }
+        
+        // return the persist resources
+        return Object.keys(excludeMap);
     },
 
     // get dependencies not including self

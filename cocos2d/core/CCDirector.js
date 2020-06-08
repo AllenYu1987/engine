@@ -454,7 +454,7 @@ cc.Director.prototype = {
             // auto release assets
             CC_BUILD && CC_DEBUG && console.time('AutoRelease');
             var autoReleaseAssets = oldScene && oldScene.autoReleaseAssets && oldScene.dependAssets;
-            AutoReleaseUtils.autoRelease(autoReleaseAssets, scene.dependAssets, persistNodeList);
+            scene.dependAssetsIncludePersist = AutoReleaseUtils.autoRelease(autoReleaseAssets, scene.dependAssets, persistNodeList);
             CC_BUILD && CC_DEBUG && console.timeEnd('AutoRelease');
         }
 
